@@ -19,8 +19,18 @@ def calculator():
     if c == "*":
         print(int(a)*int(b))
     if c == "/":
-        print(int(a)/int(b))
+        if int(a) == 0:
+            a1010()
+        elif int(b) == 0:
+            a1010()
+        else:
+            print(int(a)/int(b))
     question()
+
+
+def a1010():
+    print("Cannot Divide 0")
+    calculator()
 
 
 calculator()
