@@ -1,4 +1,13 @@
-def Calculator():
+def question():
+    print("Continue?")
+    i = input("yes = 1 or no = 0?: ")
+    while (int(i) > 0):
+        calculator()
+    else:
+        print("Bye, bye")
+
+
+def calculator():
     print("Welcome to calculator")
     a = input("Enter first number: ")
     b = input("Enter second number: ")
@@ -11,20 +20,7 @@ def Calculator():
         print(int(a)*int(b))
     if c == "/":
         print(int(a)/int(b))
+    question()
 
 
-Calculator()
-
-
-def question():
-    print("Continue?")
-    input("yes or no?: ")
-    yes = 1
-    no = 2
-    if 1:
-        Calculator()
-    if 2:
-        print("Bye, bye")
-
-
-question()
+calculator()
