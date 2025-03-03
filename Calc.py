@@ -3,8 +3,7 @@ def question():
     i = input("yes = 1 or no = 0?: ")
     while (float(i) > 0):
         calculator()
-    else:
-        print("Bye, bye")
+    print("Bye, bye")
 
 
 def calculator():
