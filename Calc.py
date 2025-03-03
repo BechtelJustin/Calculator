@@ -37,3 +37,5 @@ def errorcode_a1010():
 calculator()
 
 # make error codes for if someone puts in a word for number_1 or 2 then send them back to enter the number
+# fix /, 0/100 should = 0
+# Python check is a number
