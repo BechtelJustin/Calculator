@@ -8,5 +8,5 @@ if c == "-":
     print(int(a)-int(b))
 if c == "*":
     print(int(a)*int(b))
-if c is "/":
+if c == "/":
     print(int(a)/int(b))
