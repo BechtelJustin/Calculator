@@ -3,7 +3,7 @@ print("Welcome to calculator")
 
 def question_1():
     print("Continue?")
-    i = input("yes or no?: ")
+    i = input("Yes or No?: ").lower()
     if (i) == "yes":
         calculator()
     if (i) == "no":
@@ -13,9 +13,17 @@ def question_1():
 
 
 def calculator():
-    number_1 = float(input("Enter first number: "))
-    number_2 = float(input("Enter second number: "))
-    calculation = input("+, -, *, /")
+    number_1 = (input("Enter first number: "))
+    if number_1.isdigit():
+        number_1 = float(number_1)
+    else:
+        print("Dumbass")
+    number_2 = (input("Enter second number: "))
+    if number_2.isdigit():
+        number_2 = float(number_2)
+    else:
+        print("Dumbass")
+    calculation = input("+, -, *, /: ")
     if calculation == "+":
         print(number_1+number_2)
     if calculation == "-":
