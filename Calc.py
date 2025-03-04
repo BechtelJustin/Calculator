@@ -1,37 +1,37 @@
 print("Welcome to calculator")
 
 
-def question():
+def question_1():
     print("Continue?")
-    i = input("yes = 1 or no = 0?: ")
-    while (float(i) > 0):
+    i = input("yes or no?: ")
+    if (i) == "yes":
         calculator()
-    print("Bye, bye")
+    if (i) == "no":
+        print("Bye, bye")
+    else:
+        question_1()
 
 
 def calculator():
     number_1 = float(input("Enter first number: "))
     number_2 = float(input("Enter second number: "))
-    c = input("+, -, *, /")
-    if c == "+":
+    calculation = input("+, -, *, /")
+    if calculation == "+":
         print(number_1+number_2)
-    if c == "-":
+    if calculation == "-":
         print(number_1-number_2)
-    if c == "*":
+    if calculation == "*":
         print(number_1*number_2)
-    if c == "/":
+    if calculation == "/":
         if number_1 == 0:
-            errorcode_a1010()
+            print("cannot divide by 0")
+            calculator()
         elif number_2 == 0:
-            errorcode_a1010()
+            print("cannot divide by 0")
+            calculator()
         else:
             print(number_1/number_2)
-    question()
-
-
-def errorcode_a1010():
-    print("Cannot Divide 0")
-    calculator()
+    question_1()
 
 
 calculator()
