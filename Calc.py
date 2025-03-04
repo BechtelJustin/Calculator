@@ -17,12 +17,14 @@ def calculator():
     if number_1.isdigit():
         number_1 = float(number_1)
     else:
-        print("Dumbass")
+        print((number_1), "Is not valid number")
+        calculator()
     number_2 = (input("Enter second number: "))
     if number_2.isdigit():
         number_2 = float(number_2)
     else:
-        print("Dumbass")
+        print((number_2), "Is not valid number")
+        calculator()
     calculation = input("+, -, *, /: ")
     if calculation == "+":
         print(number_1+number_2)
