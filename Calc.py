@@ -32,7 +32,6 @@ def calculator():
     while not number_1v.isdigit() and number_1v.isdecimal():
         print((number_1v), "Is not valid number")
         number_1v = number_1()
-
     number_1v = float(number_1v)
 
     calculation_s = calculation()
@@ -44,31 +43,39 @@ def calculator():
         number_2v = number_2()
     number_2v = float(number_2v)
 
-    symbol_count = len(calculation_s.split("+"))-1
-    symbol_count = int(symbol_count)
-    if symbol_count == 1:
-        print(number_1v+number_2v)
-    else:
+    while calculator:
+        symbol_count = len(calculation_s.split("+"))-1
+        symbol_count = int(symbol_count)
+        if symbol_count == 1:
+            print(number_1v+number_2v)
+            break
+
         symbol_count = len(calculation_s.split("-"))-1
         symbol_count = int(symbol_count)
         if symbol_count == 1:
             print(number_1v-number_2v)
-        else:
-            symbol_count = len(calculation_s.split("*"))-1
-            symbol_count = int(symbol_count)
-            if symbol_count == 1:
-                print(number_1v*number_2v)
+            break
+
+        symbol_count = len(calculation_s.split("*"))-1
+        symbol_count = int(symbol_count)
+        if symbol_count == 1:
+            print(number_1v*number_2v)
+            break
+
+        symbol_count = len(calculation_s.split("/"))-1
+        symbol_count = int(symbol_count)
+        if symbol_count == 1:
+            if number_2v == 0 or number_1v == 0 and number_2v == 0:
+                print("cannot divide by 0")
             else:
-                symbol_count = len(calculation_s.split("/"))-1
-                symbol_count = int(symbol_count)
-                if symbol_count == 1:
-                    if number_2v == 0 or number_1v == 0 and number_2v == 0:
-                        print("cannot divide by 0")
-                    else:
-                        print(number_1v/number_2v)
+                print(number_1v/number_2v)
+                break
 
     question_1()
 
 
 print("Welcome to calculator")
 calculator()
+
+
+# somehow find out how to get it to minus when doing -+
